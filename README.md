@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MathHero — Site officiel
 
-## Getting Started
+Bienvenue sur le site officiel de **MathHero**, l’application qui rend les maths fun et motivantes !
 
-First, run the development server:
+## 📱 Présentation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **MathHero** : application mobile innovante pour apprendre les maths du collège au lycée, avec quiz, défis, avatars, classement…
+- Créée et développée par Kouadio Ange Aristide.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Fonctionnalités
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Landing page bilingue (FR/EN)
+- Responsive, SEO friendly
+- Présentation de l’app, téléchargements, contact, mentions légales
+- Déploiement facile sur Netlify ou Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Liens utiles
 
-## Learn More
+- [Site officiel](https://mathhero.app) <!-- ou ton Netlify public -->
+- [Google Play MathHero](https://play.google.com/store/apps/details?id=com.kanaristech.mathhero)
 
-To learn more about Next.js, take a look at the following resources:
+## 📫 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+support@mathhero.app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**© 2025 MathHero. Créé par Kouadio Ange Aristide.**
