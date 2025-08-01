@@ -44,7 +44,7 @@ const TEXT = {
     aboutTitle: "À propos du créateur",
     about: "MathHero a été conçu et développé par Kouadio Ange Aristide, professeur certifié de mathématiques en lycée, fort de 15 ans d’expérience. Convaincu que la réussite scolaire passe par la confiance, le plaisir d’apprendre et une préparation ciblée, il a créé MathHero pour offrir à chaque élève un accompagnement efficace, conforme au programme officiel, pour réussir au collège, au lycée et aux examens nationaux.",
     contact: "Une question, une suggestion ? Contacte-moi :",
-    email: "contact@mathhero.app",
+    email: "support@mathhero.app",
     legal: "Mentions légales",
     copyright: "© 2025 MathHero – Créé par Kouadio Ange Aristide",
     creator: {
@@ -79,7 +79,7 @@ const TEXT = {
     aboutTitle: "About the creator",
     about: "MathHero was designed and developed by Kouadio Ange Aristide, a certified high school mathematics teacher with 15 years of experience. Passionate about helping every student succeed, he believes that confidence, enjoyment and targeted learning are key. MathHero was created to provide effective support fully aligned with the official curriculum, helping students thrive at school and prepare for national exams.",
     contact: "Questions or suggestions? Get in touch:",
-    email: "contact@mathhero.app",
+    email: "support@mathhero.app",
     legal: "Legal notice",
     copyright: "© 2025 MathHero – Created by Kouadio Ange Aristide",
     creator: {
