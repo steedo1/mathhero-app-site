@@ -60,7 +60,7 @@ export default function MentionsLegales() {
       <h2>{t.app}</h2>
       <p>
         {t.editor}<br />
-        {t.contact}: <a href="mailto:contact@mathhero.app">contact@mathhero.app</a><br />
+        {t.contact}: <a href="mailto:support@mathhero.app">support@mathhero.app</a><br />
         {t.address}<br />
         {t.director}: {t.me}
       </p>
