@@ -1,24 +1,37 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useMemo } from "react";
+import Head from "next/head";
 
 export default function MentionsLegales() {
   const [lang, setLang] = useState("fr");
 
-  const T = {
+  const T = useMemo(() => ({
     fr: {
       title: "Mentions légales",
       app: "MathHero",
-      editor: "Site édité par : MathHero",
+      editor: "Site édité par : MathHero",
       contact: "Contact",
       address: "Abidjan, Côte d’Ivoire",
       director: "Directeur de la publication",
-      host: "Hébergeur : Netlify, Inc.",
+      host: "Hébergeur : Netlify, Inc.",
       hostAddress: "2325 3rd Street, Suite 296, San Francisco, CA 94107 USA",
       privacyTitle: "Données personnelles",
-      privacy: "Aucune donnée personnelle n’est collectée sans votre consentement.",
+      privacy:
+        "Aucune donnée personnelle n’est collectée sans votre consentement. Les préférences publicitaires, y compris le consentement, peuvent être gérées depuis l’application.",
+      termsTitle: "Conditions d’utilisation",
+      terms:
+        "L’utilisation du site et de l’application implique l’acceptation sans réserve des présentes conditions.",
+      ipTitle: "Propriété intellectuelle",
+      ip:
+        "Tous les contenus (textes, graphismes, logos, icônes) sont protégés par le droit d’auteur. Toute reproduction est interdite sans autorisation.",
+      cookiesTitle: "Cookies",
+      cookies:
+        "Des cookies techniques et de mesure d’audience peuvent être utilisés pour améliorer l’expérience et analyser l’usage.",
       copyright: "© 2025 MathHero. Tous droits réservés.",
       switch: "EN",
-      me: "KOUADIO Ange Aristide"
+      me: "KOUADIO Ange Aristide",
+      updated: "Dernière mise à jour :",
     },
     en: {
       title: "Legal Notice",
@@ -30,59 +43,116 @@ export default function MentionsLegales() {
       host: "Host: Netlify, Inc.",
       hostAddress: "2325 3rd Street, Suite 296, San Francisco, CA 94107 USA",
       privacyTitle: "Privacy",
-      privacy: "No personal data is collected without your consent.",
+      privacy:
+        "No personal data is collected without your consent. Ad preferences, including consent, can be managed from the app.",
+      termsTitle: "Terms of Use",
+      terms:
+        "Using the website and the app implies unconditional acceptance of these terms.",
+      ipTitle: "Intellectual Property",
+      ip:
+        "All content (texts, graphics, logos, icons) is protected by copyright. Any reproduction is prohibited without authorization.",
+      cookiesTitle: "Cookies",
+      cookies:
+        "Technical and analytics cookies may be used to improve experience and measure usage.",
       copyright: "© 2025 MathHero. All rights reserved.",
       switch: "FR",
-      me: "KOUADIO Ange Aristide"
-    }
-  };
+      me: "KOUADIO Ange Aristide",
+      updated: "Last updated:",
+    },
+  }), []);
+
   const t = T[lang];
+  const updatedAt = "2025-08-21";
 
   return (
-    <div style={{ maxWidth: 700, margin: "40px auto", padding: 24, fontSize: 17 }}>
-      <button
-        onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-        style={{
-          float: "right",
-          background: "#8F41FF",
-          color: "#fff",
-          border: "none",
-          borderRadius: 18,
-          padding: "6px 22px",
-          fontWeight: 700,
-          fontSize: 16,
-          cursor: "pointer"
+    <>
+      <Head>
+        <title>{t.title} • {t.app}</title>
+        <meta name="description" content={`${t.title} – ${t.app}`} />
+        <link rel="canonical" href="https://mathhero.app/mentions-legales" />
+        <meta property="og:title" content={`${t.title} • ${t.app}`} />
+        <meta property="og:description" content={t.copyright} />
+      </Head>
+
+      <main style={{ maxWidth: 760, margin: "40px auto", padding: 24, fontSize: 17, lineHeight: 1.6 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+          <h1 style={{ margin: 0 }}>{t.title} / Legal Notice</h1>
+          <button
+            onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+            style={{
+              background: "#8F41FF",
+              color: "#fff",
+              border: "none",
+              borderRadius: 18,
+              padding: "8px 18px",
+              fontWeight: 700,
+              fontSize: 15,
+              cursor: "pointer"
+            }}
+            aria-label="Change language"
+          >
+            {t.switch}
+          </button>
+        </div>
+
+        <section style={{ marginTop: 18 }}>
+          <h2 style={{ marginBottom: 6 }}>{t.app}</h2>
+          <p>
+            {t.editor}<br />
+            {t.contact}: <a href="mailto:support@mathhero.app">support@mathhero.app</a><br />
+            {t.address}<br />
+            {t.director}: {t.me}
+          </p>
+        </section>
+
+        <section>
+          <h2>Hébergement / Hosting</h2>
+          <p>
+            {t.host}<br />
+            {t.hostAddress}
+          </p>
+        </section>
+
+        <section id="privacy">
+          <h2>{t.privacyTitle} / Privacy</h2>
+          <p>{t.privacy}</p>
+        </section>
+
+        <section id="terms">
+          <h2>{t.termsTitle} / Terms</h2>
+          <p>{t.terms}</p>
+        </section>
+
+        <section>
+          <h2>{t.ipTitle} / Copyright</h2>
+          <p>{t.ip}</p>
+        </section>
+
+        <section>
+          <h2>{t.cookiesTitle}</h2>
+          <p>{t.cookies}</p>
+        </section>
+
+        <p style={{ marginTop: 18, color: "#666" }}>
+          {t.updated} {updatedAt}
+        </p>
+        <p style={{ marginTop: 10, fontWeight: 600 }}>{t.copyright}</p>
+      </main>
+
+      {/* JSON-LD Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "MathHero",
+            url: "https://mathhero.app",
+            email: "support@mathhero.app",
+            address: "Abidjan, Côte d’Ivoire",
+          })
         }}
-      >
-        {t.switch}
-      </button>
-      <h1>{t.title} / Legal Notice</h1>
-      <h2>{t.app}</h2>
-      <p>
-        {t.editor}<br />
-        {t.contact}: <a href="mailto:support@mathhero.app">support@mathhero.app</a><br />
-        {t.address}<br />
-        {t.director}: {t.me}
-      </p>
-      <h2>Hébergement / Hosting</h2>
-      <p>
-        {t.host}<br />
-        {t.hostAddress}
-      </p>
-      <h2>{t.privacyTitle} / Privacy</h2>
-      <p>
-        {t.privacy}<br />
-        {lang === "fr"
-          ? "No personal data is collected without your consent."
-          : "Aucune donnée personnelle n’est collectée sans votre consentement."}
-      </p>
-      <h2>Propriété intellectuelle / Copyright</h2>
-      <p>
-        {t.copyright}<br />
-        {lang === "fr"
-          ? "All rights reserved."
-          : "Tous droits réservés."}
-      </p>
-    </div>
+      />
+    </>
   );
 }
