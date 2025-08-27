@@ -1,4 +1,4 @@
-redonne ceci en mettant .dev partout au lieu de .app "use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -72,7 +72,7 @@ const TEXT = {
     about:
       "MathHero a été conçu par Kouadio Ange Aristide, professeur certifié de mathématiques (15 ans d’expérience), pour aider chaque élève à réussir grâce à une progression motivante et conforme au programme.",
     contact: "Une question, une suggestion ?",
-    email: "support@mathhero.app",
+    email: "support@mathhero.dev",
     legal: "Mentions légales",
     copyright: "© 2025 MathHero – Créé par Kouadio Ange Aristide",
     creator: {
@@ -130,7 +130,7 @@ const TEXT = {
     about:
       "Designed by Kouadio Ange Aristide, a certified high-school math teacher (15 years’ experience), to help every student succeed with engaging, curriculum-aligned learning.",
     contact: "Questions or suggestions?",
-    email: "support@mathhero.app",
+    email: "support@mathhero.dev",
     legal: "Legal notice",
     copyright: "© 2025 MathHero – Created by Kouadio Ange Aristide",
     creator: {
@@ -146,7 +146,7 @@ export default function Home() {
   const [hoverPlay, setHoverPlay] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollTo = (id) => {
+  const scrollTo = (id: string) => {
     setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -565,7 +565,7 @@ export default function Home() {
           {t.about}
         </div>
         <a
-          href="mailto:support@mathhero.app"
+          href="mailto:support@mathhero.dev"
           style={{
             color: COLORS.primary,
             fontWeight: 700,
@@ -601,7 +601,7 @@ export default function Home() {
           {t.contact}
         </p>
         <a
-          href="mailto:support@mathhero.app"
+          href="mailto:support@mathhero.dev"
           style={{
             display: "inline-block",
             fontWeight: 700,
@@ -672,7 +672,7 @@ export default function Home() {
 }
 
 // STYLES
-const navBtnStyle = {
+const navBtnStyle: React.CSSProperties = {
   background: "none",
   border: "none",
   color: COLORS.primary,
@@ -684,7 +684,7 @@ const navBtnStyle = {
   transition: "background 0.18s",
 };
 
-const burgerBtnStyle = {
+const burgerBtnStyle: React.CSSProperties = {
   ...navBtnStyle,
   fontSize: 22,
   width: "80vw",
@@ -697,7 +697,7 @@ const burgerBtnStyle = {
   color: COLORS.primary,
 };
 
-const screenStyle = {
+const screenStyle: React.CSSProperties = {
   borderRadius: 18,
   objectFit: "cover",
   boxShadow: "0 2px 14px rgba(90,45,145,0.13)",
