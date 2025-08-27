@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 export default function DeleteAccount() {
-  const [lang, setLang] = useState<"fr"|"en">("fr");
+  const [lang, setLang] = useState("fr");
   const t = {
     fr: {
       title: "Supprimer mon compte",
