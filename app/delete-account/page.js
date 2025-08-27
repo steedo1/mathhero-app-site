@@ -100,7 +100,7 @@ export default function DeleteAccount() {
           <p>{t.helpText}</p>
           <p>
             <a href={mailto} style={{fontWeight:800, textDecoration:"underline", color:"#5A2D91"}}>
-              {t.mail} → support@mathhero.app
+              {t.mail} → support@mathhero.dev
             </a>
           </p>
         </section>
