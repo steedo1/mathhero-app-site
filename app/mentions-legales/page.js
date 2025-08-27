@@ -18,7 +18,10 @@ export default function MentionsLegales() {
       hostAddress: "2325 3rd Street, Suite 296, San Francisco, CA 94107 USA",
       privacyTitle: "Données personnelles",
       privacy:
-        "Aucune donnée personnelle n’est collectée sans votre consentement. Les préférences publicitaires, y compris le consentement, peuvent être gérées depuis l’application.",
+        "Nous collectons uniquement l’adresse e-mail associée à votre compte Google afin de sécuriser la connexion et sauvegarder votre progression. Ces données ne sont jamais revendues. Les préférences publicitaires, y compris le consentement, peuvent être gérées depuis l’application.",
+      iapTitle: "Achats intégrés",
+      iap:
+        "L’application propose des achats intégrés (ex : suppression des publicités, achat de gemmes). Ces achats sont traités par Google Play Billing et soumis à ses conditions.",
       termsTitle: "Conditions d’utilisation",
       terms:
         "L’utilisation du site et de l’application implique l’acceptation sans réserve des présentes conditions.",
@@ -44,7 +47,10 @@ export default function MentionsLegales() {
       hostAddress: "2325 3rd Street, Suite 296, San Francisco, CA 94107 USA",
       privacyTitle: "Privacy",
       privacy:
-        "No personal data is collected without your consent. Ad preferences, including consent, can be managed from the app.",
+        "We only collect the e-mail address linked to your Google account to secure login and save your progress. This data is never sold. Ad preferences, including consent, can be managed from the app.",
+      iapTitle: "In-app Purchases",
+      iap:
+        "The app offers in-app purchases (e.g., ad removal, gem packs). These purchases are processed by Google Play Billing and subject to its terms.",
       termsTitle: "Terms of Use",
       terms:
         "Using the website and the app implies unconditional acceptance of these terms.",
@@ -69,7 +75,7 @@ export default function MentionsLegales() {
       <Head>
         <title>{t.title} • {t.app}</title>
         <meta name="description" content={`${t.title} – ${t.app}`} />
-        <link rel="canonical" href="https://mathhero.app/mentions-legales" />
+        <link rel="canonical" href="https://mathhero.dev/mentions-legales" />
         <meta property="og:title" content={`${t.title} • ${t.app}`} />
         <meta property="og:description" content={t.copyright} />
       </Head>
@@ -99,7 +105,7 @@ export default function MentionsLegales() {
           <h2 style={{ marginBottom: 6 }}>{t.app}</h2>
           <p>
             {t.editor}<br />
-            {t.contact}: <a href="mailto:support@mathhero.app">support@mathhero.app</a><br />
+            {t.contact}: <a href="mailto:support@mathhero.dev">support@mathhero.dev</a><br />
             {t.address}<br />
             {t.director}: {t.me}
           </p>
@@ -116,6 +122,11 @@ export default function MentionsLegales() {
         <section id="privacy">
           <h2>{t.privacyTitle} / Privacy</h2>
           <p>{t.privacy}</p>
+        </section>
+
+        <section id="iap">
+          <h2>{t.iapTitle}</h2>
+          <p>{t.iap}</p>
         </section>
 
         <section id="terms">
@@ -147,8 +158,8 @@ export default function MentionsLegales() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "MathHero",
-            url: "https://mathhero.app",
-            email: "support@mathhero.app",
+            url: "https://mathhero.dev",
+            email: "support@mathhero.dev",
             address: "Abidjan, Côte d’Ivoire",
           })
         }}
