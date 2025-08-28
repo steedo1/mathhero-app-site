@@ -17,7 +17,7 @@ const SCREEN1 = "/screenshot1.png";
 const SCREEN2 = "/screenshot2.png";
 const AVATAR = "/avatar-hero.png";
 
-// 🔧 Lien Play Store corrigé sur le bon package
+// 🔧 Lien Play Store
 const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.steedo1.mathhero";
 
@@ -146,7 +146,7 @@ export default function Home() {
   const [hoverPlay, setHoverPlay] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollTo = (id: string) => {
+  const scrollTo = (id) => {
     setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -163,7 +163,7 @@ export default function Home() {
       <Head>
         <title>MathHero | {t.slogan}</title>
         <meta name="description" content={t.desc} />
-        {/* Canonical corrigé vers .dev */}
+        {/* Canonical vers .dev */}
         <link rel="canonical" href="https://mathhero.dev/" />
         <meta property="og:title" content={`MathHero | ${t.slogan}`} />
         <meta property="og:description" content={t.desc} />
@@ -630,7 +630,6 @@ export default function Home() {
         }}
       >
         <div style={{ marginBottom: 8 }}>
-          {/* Ajout du lien Supprimer mon compte */}
           <a
             href="/delete-account"
             style={{
@@ -671,8 +670,8 @@ export default function Home() {
   );
 }
 
-// STYLES
-const navBtnStyle: React.CSSProperties = {
+// STYLES (JS pur)
+const navBtnStyle = {
   background: "none",
   border: "none",
   color: COLORS.primary,
@@ -684,7 +683,7 @@ const navBtnStyle: React.CSSProperties = {
   transition: "background 0.18s",
 };
 
-const burgerBtnStyle: React.CSSProperties = {
+const burgerBtnStyle = {
   ...navBtnStyle,
   fontSize: 22,
   width: "80vw",
@@ -697,7 +696,7 @@ const burgerBtnStyle: React.CSSProperties = {
   color: COLORS.primary,
 };
 
-const screenStyle: React.CSSProperties = {
+const screenStyle = {
   borderRadius: 18,
   objectFit: "cover",
   boxShadow: "0 2px 14px rgba(90,45,145,0.13)",
